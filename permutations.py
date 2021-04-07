@@ -12,3 +12,13 @@ def permutations(array, permutation=[]):
             yield from permutations(array_copy, permutation + [element])
     else:
         yield permutation
+
+
+def circular_permutations(array):
+    """Generate all possible circular permutations of an array.
+
+    Argument:
+    array -- array that is permutated
+    """
+    permutation = [array.pop(0)]
+    return permutations(array, permutation)
