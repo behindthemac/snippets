@@ -10,7 +10,7 @@ def euclidean_algorithm_recursive(a, b):
         The greatest common divisor of the two integers.
     """
     if b != 0:
-        return euclidean_algorithm(b, a % b)
+        return euclidean_algorithm_recursive(b, a % b)
     return a
 
 
