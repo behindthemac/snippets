@@ -15,3 +15,15 @@ def permutations(array, permutation=[]):
             array.insert(index, value)
     else:
         yield permutation
+
+
+def circular_permutations(array):
+    """Generates all possible circular permutations of an array.
+
+    Args:
+        array: An array
+
+    Yields:
+        All possible circular permutations of the array
+    """
+    return permutations(array[1:], [array[0]])
