@@ -27,3 +27,16 @@ def circular_permutations(array):
         All possible circular permutations of the array
     """
     return permutations(array[1:], [array[0]])
+
+
+# examples
+
+array = [0, 1, 2, 3]
+
+print('Permutations')
+for permutation in permutations(array):
+    print(permutation)
+
+print('Circular permutations')
+for circular_permutation in circular_permutations(array):
+    print(circular_permutation)
